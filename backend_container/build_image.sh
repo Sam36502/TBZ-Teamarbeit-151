@@ -2,7 +2,10 @@
 
 echo Building Annales-Memum Application Image...
 
-sudo docker build -t bismarck6502/annales-memum-app .
+sudo docker build -t bismarck6502/annales-memum-app:latest .
+
+echo Pushing New Build to Dockerhub...
+
 sudo docker push bismarck6502/annales-memum-app
 
 echo Done!

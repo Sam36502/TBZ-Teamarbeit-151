@@ -6,8 +6,8 @@
 
 # Create Database
 DROP DATABASE IF EXISTS `annales_memum_db`;
-CREATE DATABASE `annales_memum` DEFAULT CHARSET utf8;
-USE `annales_memum`;
+CREATE DATABASE `annales_memum_db` DEFAULT CHARSET utf8;
+USE `annales_memum_db`;
 
 # Create Users
 DROP USER IF EXISTS 'ann_mem_user'@'localhost';

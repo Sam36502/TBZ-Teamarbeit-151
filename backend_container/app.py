@@ -9,10 +9,10 @@ app = Flask(__name__)
 
 app.secret_key = 'somesecretkey'
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'someone'
-app.config['MYSQL_PASSWORD'] = 'someone'
-app.config['MYSQL_DB'] = 'somewhere'
+app.config['MYSQL_HOST'] = '172.17.0.4'
+app.config['MYSQL_USER'] = 'ann_mem_user'
+app.config['MYSQL_PASSWORD'] = '4nn_m3m'
+app.config['MYSQL_DB'] = 'annales_memum'
 
 db = MySQL(app)
 
@@ -182,4 +182,4 @@ def deleteEntry(pageId):
         db.connection.commit()
         return redirect('/')
 
-app.run()
+app.run(host='0.0.0.0')

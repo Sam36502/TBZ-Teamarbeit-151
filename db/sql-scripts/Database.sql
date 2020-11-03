@@ -5,18 +5,18 @@
 # Version: 1.0
 
 # Create Database
-DROP DATABASE IF EXISTS `annales_memum_db`;
-CREATE DATABASE `annales_memum_db` DEFAULT CHARSET utf8;
-USE `annales_memum_db`;
+DROP DATABASE IF EXISTS `annales_memum`;
+CREATE DATABASE `annales_memum` DEFAULT CHARSET utf8;
+USE `annales_memum`;
 
 # Create Users
 DROP USER IF EXISTS 'ann_mem_user'@'localhost';
 CREATE USER 'ann_mem_user'@'localhost' IDENTIFIED BY '4nn_m3m';
-GRANT ALL PRIVILEGES ON `annales_memum_db`.* TO 'ann_mem_user'@'localhost';
+GRANT ALL PRIVILEGES ON `annales_memum`.* TO 'ann_mem_user'@'localhost';
 
 DROP USER IF EXISTS 'ann_mem_user'@'%';
 CREATE USER 'ann_mem_user'@'%' IDENTIFIED BY '4nn_m3m';
-GRANT INSERT, SELECT, UPDATE, DELETE ON `annales_memum_db`.* TO 'ann_mem_user'@'%';
+GRANT INSERT, SELECT, UPDATE, DELETE ON `annales_memum`.* TO 'ann_mem_user'@'%';
 
 # Create Tables
 DROP TABLE IF EXISTS tbl_user;
